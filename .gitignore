@@ -1,0 +1,15 @@
+# nix
+
+result
+result-*
+.pre-commit-config.yaml
+
+
+# IDE specific files
+.vscode/
+
+# Environment variables 
+.env
+
+# yarn
+node_modules/

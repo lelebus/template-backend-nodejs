@@ -1,0 +1,31 @@
+type Position {
+  lat: Float!
+  lng: Float!
+}
+
+input PositionInput {
+  lat: Float!
+  lng: Float!
+}
+
+type Address {
+  street: String!
+  streetNumber: String!
+  zip: String!
+  city: String!
+  province: String!
+  region: String!
+  country: String!
+  position: Position
+}
+
+input AddressInput {
+  street: String!
+  streetNumber: String!
+  zip: String!
+  city: String!
+  province: String!
+  region: String
+  country: String!
+  position: PositionInput
+}

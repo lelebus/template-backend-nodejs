@@ -1,0 +1,28 @@
+enum NotificationType {
+  NEW_UPDATE
+}
+
+type Notification {
+  id: ID!
+  type: NotificationType!
+  contentId: ID!
+  dynamicValues: [KeyValue]!
+  imageUrl: String
+  read: Boolean!
+  createdOn: Date!
+}
+
+extend type Subscription {
+  # example subscription available for testing
+  testNumberIncrement: Int
+
+  newNotification: Notification
+}
+
+extend type Query {
+  getMyNotifications(offset: Int, limit: Int): [Notification]
+}
+
+extend type Mutation {
+  toggleNotificationReadStatus(id: ID!): Boolean!
+}

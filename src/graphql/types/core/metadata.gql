@@ -1,0 +1,9 @@
+type Metadata {
+  createdOn: Date!
+  createdBy: ID
+
+  lastUpdatedOn: Date!
+  lastUpdatedBy: ID
+
+  deletedOn: Date
+}

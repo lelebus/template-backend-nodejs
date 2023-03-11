@@ -1,0 +1,11 @@
+enum LanguageCode {
+  IT
+}
+
+type Translation {
+  it: String!
+}
+
+input TranslationInput {
+  it: String!
+}

@@ -1,0 +1,51 @@
+enum UserRole {
+  ADMIN
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+type Profile {
+  firstName: String!
+  lastName: String!
+  imageUrl: Url
+  gender: Gender!
+}
+
+input ProfileInput {
+  firstName: String
+  lastName: String
+  gender: Gender
+}
+
+type User {
+  id: ID!
+  email: String!
+  locale: LanguageCode!
+  role: UserRole
+  profile: Profile!
+  metadata: Metadata!
+}
+
+extend type Query {
+  existsUser(email: String!): Boolean!
+  me: User!
+}
+
+extend type Mutation {
+  login(email: String!, password: String!): User!
+  logout: Boolean
+
+  sendUserPasswordResetToken(email: String!): Boolean!
+  resetUserPassword(
+    email: String!
+    newPassword: String!
+    token: String!
+  ): Boolean!
+
+  sendUserEmailChangeToken(email: String!): Boolean!
+  changeUserEmail(userId: ID!, newEmail: String!, token: String!): Boolean!
+}

@@ -1,0 +1,20 @@
+scalar Date
+scalar Upload
+scalar Url
+
+type KeyValue {
+  key: String!
+  value: String!
+}
+
+type Query {
+  _empty: String
+}
+
+type Mutation {
+  _empty: String
+}
+
+type Subscription {
+  _empty: String
+}

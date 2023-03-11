@@ -1,0 +1,77 @@
+{
+  "name": "boilerplate-backend",
+  "version": "2.0.0",
+  "description": "Template for Node.js backend with Apollo GraphQL",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "NODE_ENV=dev nodemon src/index.ts -e js,ts,gql",
+    "dev:mock": "NODE_ENV=mock nodemon src/index.ts -e js,ts,gql",
+    "test": "jest --runInBand",
+    "test:dev": "jest --watch --runInBand",
+    "test:silent": "LOG_LEVEL=fatal jest --runInBand",
+    "test:coverage": "LOG_LEVEL=fatal jest --runInBand --coverage",
+    "commit": "cz",
+    "release": "standard-version"
+  },
+  "repository": "git@github.com:codeworks-projects/template-nodejs-apollo.git",
+  "author": "Gabriele De Candido <gabrieledecandido@flashbeing.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@graphql-tools/load-files": "^6.5.3",
+    "@graphql-tools/schema": "^9.0.1",
+    "@sendgrid/mail": "^7.7.0",
+    "@types/bcryptjs": "^2.4.2",
+    "apollo-server": "^3.6.1",
+    "apollo-server-core": "^3.10.1",
+    "apollo-server-express": "^3.6.3",
+    "array-foreach-async": "^1.0.1",
+    "aws-sdk": "^2.1183.0",
+    "bcryptjs": "^2.4.3",
+    "chalk": "4.1.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "graphql": "^16.6.0",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-upload": "^13.0.0",
+    "graphql-ws": "^5.10.1",
+    "jest": "^28.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "merge-graphql-schemas": "^1.7.8",
+    "mime-db": "^1.52.0",
+    "node-cron": "^3.0.2",
+    "pg": "^8.7.3",
+    "pg-protocol": "^1.5.0",
+    "pino": "^7.8.0",
+    "sendgrid": "^5.2.3",
+    "sequelize": "^6.20.1",
+    "stripe": "^10.10.0",
+    "supertest": "^6.2.3",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2",
+    "ulid": "^2.3.0",
+    "ws": "^8.8.1"
+  },
+  "devDependencies": {
+    "@graphql-tools/mock": "^8.7.14",
+    "@types/jest": "^28.1.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "nodemon": "^2.0.20",
+    "pino-pretty": "^7.5.3",
+    "sqlite3": "^5.1.2",
+    "standard-version": "^9.3.2",
+    "ts-jest": "^28.0.5",
+    "ts-node-dev": "^2.0.0-0"
+  },
+  "resolutions": {
+    "graphql": "^16.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
