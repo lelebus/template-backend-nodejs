@@ -1,6 +1,6 @@
 {
   "name": "boilerplate-backend",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Template for Node.js backend with Apollo GraphQL",
   "main": "src/index.js",
   "scripts": {
@@ -14,8 +14,8 @@
     "commit": "cz",
     "release": "standard-version"
   },
-  "repository": "git@github.com:codeworks-projects/template-nodejs-apollo.git",
-  "author": "Gabriele De Candido <gabrieledecandido@flashbeing.com>",
+  "repository": "git@github.com:lelebus/template-backend-nodejs.git",
+  "author": "Gabriele De Candido <hello@decandido.dev>",
   "license": "MIT",
   "private": true,
   "dependencies": {
